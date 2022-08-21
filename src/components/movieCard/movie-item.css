@@ -1,0 +1,29 @@
+.mui-card {
+  background-color: #00000000 !important;
+  color: lightgray !important;
+}
+.mui-card p {
+  padding-top: 10px;
+  color: lightgray !important;
+}
+.delete-btn {
+  color: rgb(238, 17, 17);
+}
+
+.card-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.card-icons * {
+  font-size: 16px;
+}
+.like-dislike-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 3px;
+}
+
+.like-dislike-icons * {
+  color: lightgray;
+}

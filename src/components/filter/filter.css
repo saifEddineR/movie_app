@@ -1,0 +1,34 @@
+.movie-header {
+  display: flex;
+  background-color: #252530;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  padding: 10px 0;
+}
+.movie-header p {
+  font-weight: bold;
+}
+.movie-header input,
+search-mui {
+  border: 1px solid #67677b;
+  background-color: transparent;
+  outline: none;
+  padding: 10px 20px;
+  width: 240px !important;
+  color: white;
+}
+.movie-header input::placeholder {
+  color: rgba(255, 255, 255, 0.758);
+}
+.movie-header select,
+.MuiNativeSelect-nativeInput {
+  /* border: none; */
+  /* background-color: transparent; */
+  color: white !important;
+  text-decoration-color: white !important;
+  border-color: white !important;
+}
+.movie-header option {
+  color: #252530;
+}

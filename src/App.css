@@ -1,5 +1,22 @@
-.movie-list{
-  display:flex;
+.movie-list {
+  display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+.movie-container {
+  background-color: #1c1c25;
+  min-height: calc(100vh - 133.6px);
+  box-sizing: border-box;
+  display: flex;
+  padding: 2vw 8vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pagination-mui {
+  background-color: #1c1c25;
+  height: 50px;
+  padding-bottom: 10px;
+}
+.pagination-mui * {
+  margin: 0 !important;
 }

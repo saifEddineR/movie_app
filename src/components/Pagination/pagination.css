@@ -1,0 +1,6 @@
+.MuiPagination-text {
+  color: white;
+}
+.MuiPagination-root * {
+  color: white !important;
+}

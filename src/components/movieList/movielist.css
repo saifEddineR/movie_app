@@ -1,0 +1,9 @@
+.movie-list {
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+}
+.movie-list img {
+  height: 300px;
+}
