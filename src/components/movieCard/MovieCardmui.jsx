@@ -18,21 +18,21 @@ import './movie-item.css';
 export default function MovieCardmui({ movie }) {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
-  const {
-    deleteMovie,
-    addLikeToMovie,
-    removeLikeToMovie,
-    addDisikeToMovie,
-    removeDisikeToMovie,
-  } = useContext(MovieUpdateContext);
+  const movieUpdateContext = useContext(MovieUpdateContext);
+  // const { removeLikeToMovie, addDisikeToMovie, removeDisikeToMovie } =
+  //   useContext(MovieUpdateContext);
 
   const like = (check) => {
     setLiked(!liked);
-    check ? addLikeToMovie(movie.id) : removeLikeToMovie(movie.id);
+    check
+      ? movieUpdateContext.addLikeToMovie(movie.id)
+      : movieUpdateContext.removeLikeToMovie(movie.id);
   };
   const dislike = (check) => {
     setDisliked(!disliked);
-    check ? addDisikeToMovie(movie.id) : removeDisikeToMovie(movie.id);
+    check
+      ? movieUpdateContext.addDisikeToMovie(movie.id)
+      : movieUpdateContext.removeDisikeToMovie(movie.id);
   };
 
   return (
@@ -44,7 +44,9 @@ export default function MovieCardmui({ movie }) {
       <CardMedia component='img' image={`/images/${movie.thumbnail}`} alt='Paella dish' />
       <CardContent>
         {/* <CardHeader title='movie title' /> */}
-        <h3 style={{ margin: 0, padding: 0 }}>{movie.title}</h3>
+        <h3 data-testid='movie-title' style={{ margin: 0, padding: 0 }}>
+          {movie.title}
+        </h3>
         <Typography variant='body2' color='text.secondary'>
           {movie.category}
         </Typography>
@@ -68,7 +70,7 @@ export default function MovieCardmui({ movie }) {
             <span>{movie.dislikes}</span>
           </IconButton>
         </div>
-        <IconButton onClick={() => deleteMovie(movie.id)}>
+        <IconButton onClick={() => movieUpdateContext.deleteMovie(movie.id)}>
           <DeleteIcon className='delete-btn'></DeleteIcon>
         </IconButton>
       </CardActions>

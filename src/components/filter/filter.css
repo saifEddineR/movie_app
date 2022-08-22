@@ -5,6 +5,12 @@
   color: white;
   align-items: center;
   padding: 10px 0;
+  flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  .movie-header {
+    padding: 0 50px;
+  }
 }
 .movie-header p {
   font-weight: bold;
@@ -28,6 +34,7 @@ search-mui {
   color: white !important;
   text-decoration-color: white !important;
   border-color: white !important;
+  background-color: transparent;
 }
 .movie-header option {
   color: #252530;
